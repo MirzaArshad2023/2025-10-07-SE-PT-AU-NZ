@@ -9,7 +9,9 @@ function PrintLinesToConsole() {
   console.log("Hello world");
 }
 function Sum(a, b) {
-  return a + b;
+  console.log("a = " + a);
+  console.log("b = " + b);
+  return a - b;
 }
 
 function Mulitply(a, b) {
@@ -22,4 +24,5 @@ function Divide(a, b) {
   return a / b;
 }
 
+console.log(Sum(10, 20));
 console.log(Mulitply(Sum(2, 3), Sum(11, 5)));

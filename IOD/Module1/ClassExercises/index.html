@@ -12,6 +12,16 @@
         <h1 id="header">Header</h1>
     </header>
     <section>
+        <select id="selectDice">
+            <option>6</option>
+            <option>10</option>
+        </select>
+        <button onclick="RollDice()">RollDice</button>
+        <section>
+            <p id="selectedDice2"></p>
+        </section>
+    </section>
+    <section>
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
@@ -34,7 +44,7 @@
         </aside>
     </section>
     <section>
-        <form>
+        <form onsubmit="formsubmitted()">
             <div>
                 <label>Street Address:</label>
                 <input type="text">
@@ -47,6 +57,9 @@
                 <button onclick="PlaceOrder()">Order Now</button>
             </div>
         </form>
+        <div>
+            <button onclick="PlaceOrder()">Change</button>
+        </div>
     </section>
     <footer>
         <p>@copyright 2050 by nobody. all rights
@@ -55,13 +68,27 @@
 
 </body>
 <script>
+    function formsubmitted(e) {
+        e.preventDefault();
+        return false;
+    }
     document.getElementById("header").innerText =
         'Hello JavaScript';
     document.getElementById("aside").style.backgroundColor =
         'green';
 
     function PlaceOrder() {
-        alert("Your Order is placed!!")
+
+        console.log("Placing order now...")
+        console.log("executing code..")
+        console.debug("debugging code..")
+        console.error("Some error occurred")
+        console.warn("warning the code is not good")
+        alert(document.getElementById("id2").value)
+    }
+    function RollDice() {
+        document.getElementById("selectedDice2").innerText = document.getElementById("selectDice").value
+
     }
 </script>
 
