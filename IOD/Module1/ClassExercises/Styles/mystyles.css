@@ -1,10 +1,16 @@
-li{
-    background-color: yellow;
+li {
+  background-color: yellow;
 }
 
-h1, h2{
-    background-color: green;
+h1,
+h2 {
+  background-color: green;
 }
-body{
-    background-color: aliceblue
+body {
+  background-color: aliceblue;
+}
+.class1 {
+  color: blue;
+  background-color: pink;
+  font-weight: bold;
 }
